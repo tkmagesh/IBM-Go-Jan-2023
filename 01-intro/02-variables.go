@@ -113,4 +113,14 @@ func main() {
 		v = "another value"
 		fmt.Println(v)
 	*/
+
+	// complex numbers
+	var c1 complex64 = 4 + 5i
+	fmt.Println(c1)
+	fmt.Printf("real = %v\n", real(c1))
+	fmt.Printf("imaginary = %v\n", imag(c1))
+
+	var c2 complex64 = 7 + 11i
+	var c3 = c1 + c2
+	fmt.Println(c3)
 }
