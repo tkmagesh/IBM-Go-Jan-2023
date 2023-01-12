@@ -119,7 +119,11 @@ Variables
     Function Scope
         := can be used
         Cannot have unused variables
+        
 
     Package Scope
         := cannot be used
         Can have unused variables
+
+Constants
+    CAN have unused constants at function scope & package scope
