@@ -135,5 +135,6 @@ Constructs
     func
 
 Functions
-    - Variadic function
+    - Variadic functions
+    - Anonymous functions
     
