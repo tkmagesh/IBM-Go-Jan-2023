@@ -1,0 +1,61 @@
+Magesh Kuppan
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hour)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM
+
+Methodology:
+    * No Powerpoint
+    * 100% hands on driven
+
+About You:
+    Name
+    Experience
+    Primary Skillset
+    Experience in Go (if any)
+
+
+Why Go?
+    Simplicity
+        ONLY 25 keywords
+            - No access modifiers
+            - No classes (only structs)
+            - No inheritence (only composition)
+            - No reference types (everything is a value)
+            - No exceptions (only errors)
+            - No "try catch finally"
+            - No pointer arithmetic
+            - No implicit type conversion
+            - No function overloading
+    
+    Lightweight
+        Close to hardware
+        No VM
+        Efficient Concurrency Model
+
+    Performance
+        Close to hardware
+        Equivalent to C++
+
+    Concurrency
+        - Concurrency features are built in the language
+            go keyword, channel (data type), channel operator ( <- ), range keyword, "select case" construct
+        - Standard Library
+            "sync" package
+            "sync/atomic" package
+
+
+The Paradox of Choice (Barry Schwartz)
+Stumbling on Happiness (Daniel Gilbert)
+
+Software Requirements:
+    1. Go Tools (https://go.dev/dl)
+        Verification:
+            go version
+
+    2. Visual Studio Code (https://code.visualstudio.com/download)
+    3. Go extensions for VS Code (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+    4. Any Git client
