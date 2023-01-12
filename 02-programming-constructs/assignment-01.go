@@ -5,13 +5,28 @@ package main
 import "fmt"
 
 func main() {
-LOOP:
+	/*
+	   LOOP:
+	   	for no := 3; no <= 100; no++ {
+	   		for i := 2; i <= (no / 2); i++ {
+	   			if no%i == 0 {
+	   				continue LOOP
+	   			}
+	   		}
+	   		fmt.Println("Prime No : ", no)
+	   	}
+	*/
+
 	for no := 3; no <= 100; no++ {
+		isPrime := true
 		for i := 2; i <= (no / 2); i++ {
 			if no%i == 0 {
-				continue LOOP
+				isPrime = false
+				break
 			}
 		}
-		fmt.Println("Prime No : ", no)
+		if isPrime {
+			fmt.Println("Prime No :", no)
+		}
 	}
 }
