@@ -137,4 +137,8 @@ Constructs
 Functions
     - Variadic functions
     - Anonymous functions
+    - Higher Order Functions (Functions as first class objects)
+        * Assign functions as values to variables
+        * Pass functions are arguments
+        * Return functions as return results
     
