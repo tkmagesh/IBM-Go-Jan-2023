@@ -59,3 +59,29 @@ Software Requirements:
     2. Visual Studio Code (https://code.visualstudio.com/download)
     3. Go extensions for VS Code (https://marketplace.visualstudio.com/items?itemName=golang.Go)
     4. Any Git client
+
+To run a program
+    go run <filename.go>
+
+To create a build
+    go build <filename.go>
+    go build -o <binary_filename> <filename.go>
+
+To list all the environment variables
+    go env
+
+To list specific environment variables
+    go env <var_1> <var_2> .....
+
+To change the environment variables
+    go env -w <var_1=val_1> <var_2=val_2>
+    
+Environment variables for cross compilation
+    GOARCH
+    GOOS
+
+To get the list of supported platforms
+    go tool dist list
+
+To cross compile
+    GOOS=windows GOARCH=386 go build <filename.go>
