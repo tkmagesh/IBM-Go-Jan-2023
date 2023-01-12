@@ -127,3 +127,9 @@ Variables
 
 Constants
     CAN have unused constants at function scope & package scope
+
+Constructs
+    if else
+    switch case
+    for
+    func
