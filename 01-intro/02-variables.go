@@ -8,6 +8,9 @@ var msg = "Hello World [pkg]!"
 
 // msg := "Hello World [pkg]!" //=> NOT ALLOWED
 
+// unused variable at the package scope
+var v = "something"
+
 func main() {
 	/*
 		fmt.Println("Hello World!")
@@ -104,4 +107,10 @@ func main() {
 	result := x + y
 
 	fmt.Printf(str, x, y, result)
+
+	/*
+		var v = "something"
+		v = "another value"
+		fmt.Println(v)
+	*/
 }
