@@ -140,4 +140,40 @@ func main() {
 		fmt.Println("[Free] Listen to music")
 	}
 
+	/* loop - for */
+	fmt.Println("for - [v1.0]")
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+
+	fmt.Println("for (while) - [v2.0]")
+	numSum := 1
+	for numSum < 100 {
+		numSum += numSum
+	}
+	fmt.Println("numSum =", numSum)
+
+	fmt.Println("for (infinte) - [v3.0]")
+	x := 1
+	for {
+		x += x
+		if x >= 100 {
+			break
+		}
+	}
+	fmt.Println("x =", x)
+
+	fmt.Println("for - using labels")
+
+OUTER_LOOP:
+	for i := 0; i < 10; i++ {
+		for j := 0; j < 10; j++ {
+			fmt.Printf("i = %d, j = %d\n", i, j)
+			if i == j {
+				fmt.Println("==================")
+				continue OUTER_LOOP // break
+			}
+		}
+	}
+
 }
