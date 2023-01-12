@@ -133,3 +133,7 @@ Constructs
     switch case
     for
     func
+
+Functions
+    - Variadic function
+    
