@@ -60,6 +60,10 @@ Software Requirements:
     3. Go extensions for VS Code (https://marketplace.visualstudio.com/items?itemName=golang.Go)
     4. Any Git client
 
+Standard Library Documentation:
+    https://pkg.go.dev/std
+
+    
 To run a program
     go run <filename.go>
 
@@ -75,7 +79,7 @@ To list specific environment variables
 
 To change the environment variables
     go env -w <var_1=val_1> <var_2=val_2>
-    
+
 Environment variables for cross compilation
     GOARCH
     GOOS
