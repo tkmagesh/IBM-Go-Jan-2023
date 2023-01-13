@@ -32,15 +32,13 @@ func main() {
 		profileSubtract(100, 200)
 	*/
 
-	/*
-		logAdd := logOperation(add)
-		profileLogAdd := profileOpertation(logAdd)
-		profileLogAdd(100, 200)
+	logAdd /* anon fn from logOperation */ := logOperation(add)
+	profileLogAdd /* anon fn from profileOperation */ := profileOpertation(logAdd)
+	profileLogAdd(100, 200)
 
-		logSubtract := logOperation(subtract)
-		profileLogSubtract := profileOpertation(logSubtract)
-		profileLogSubtract(100, 200)
-	*/
+	logSubtract := logOperation(subtract)
+	profileLogSubtract := profileOpertation(logSubtract)
+	profileLogSubtract(100, 200)
 
 	/*
 		profileLogAdd := profileOpertation(logOperation(add))
@@ -50,11 +48,13 @@ func main() {
 		profileLogSubtract(100, 200)
 	*/
 
-	profileLogAdd := chain(add, logOperation, profileOpertation)
-	profileLogAdd(100, 200)
+	/*
+		profileLogAdd := chain(add, logOperation, profileOpertation)
+		profileLogAdd(100, 200)
 
-	profileLogSubtract := chain(subtract, logOperation, profileOpertation)
-	profileLogSubtract(100, 200)
+		profileLogSubtract := chain(subtract, logOperation, profileOpertation)
+		profileLogSubtract(100, 200)
+	*/
 
 }
 
