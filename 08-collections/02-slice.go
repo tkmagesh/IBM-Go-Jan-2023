@@ -18,7 +18,7 @@ func main() {
 	fmt.Printf("&nos = %p, nos = %v\n", &nos, nos)
 
 	hundreds := []int{100, 200, 300}
-	nos = append(nos, hundreds...)
+	nos = append(nos, hundreds...) // hundres[0], hundreds[1]
 
 	fmt.Println("Iterating an Slice (using indexer)")
 	for i := 0; i < len(nos); i++ {
