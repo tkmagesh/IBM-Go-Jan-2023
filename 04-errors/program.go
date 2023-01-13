@@ -18,6 +18,7 @@ func main() {
 		return
 	}
 	fmt.Printf("Dividing 100 by 7, quotient = %d and remainder = %d\n", q, r)
+
 }
 
 /*
