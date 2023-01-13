@@ -31,12 +31,22 @@ func main() {
 	fmt.Println("x =", x)
 	fmt.Println("dupX =", dupX)
 
+	nosPtr := &nos
+	fmt.Println(nos[0], (*nosPtr)[0], nosPtr[0])
+
 	fmt.Println("Before sorting, nos =", nos)
-	Sort(?)
+	Sort(&nos)
 	fmt.Println("After sorting, nos =", nos)
 
 }
 
-func Sort(/*  */)/* DONOT return anything */ {
-
+func Sort(nos *[5]int) /* DONOT return anything */ {
+	for i := 0; i < len(nos)-1; i++ {
+		for j := i + 1; j < len(nos); j++ {
+			// if (*nos)[i] > (*nos)[j] {
+			if nos[i] > nos[j] {
+				nos[i], nos[j] = nos[j], nos[i]
+			}
+		}
+	}
 }
