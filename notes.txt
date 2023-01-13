@@ -151,3 +151,13 @@ Errors
         errors.New()
         fmt.Errorf()
         etc
+
+Collection
+    Array
+        Fixed length typed collection
+
+    Slice
+        Varying length typed collection
+
+    Map
+        varying length typed collection of key/value pairs
