@@ -142,3 +142,12 @@ Functions
         * Pass functions are arguments
         * Return functions as return results
     
+Errors
+    values
+    implements "error" interface
+    Not "thrown" but returned
+    
+    Creation:
+        errors.New()
+        fmt.Errorf()
+        etc
