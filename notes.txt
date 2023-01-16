@@ -232,3 +232,8 @@ Modularization
     
     Reference :
         https://go.dev/ref/mod 
+
+
+Interface
+    In Go, interfaces are "IMPLICITLY" implemented
+    
