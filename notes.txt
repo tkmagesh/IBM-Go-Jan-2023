@@ -219,15 +219,16 @@ Modularization
 
     To refer to the module cache
         go run -mod=mod .
+        go build -mod=mod .
     
-    To install a go module as an executable binary
+    To install a go module as an executable binary (GOPATH/bin folder)
         go install <module_name>
 
-        
+
     Other useful commands
         go mod graph
         go mod why <module>
     
     
     Reference :
-        https://go.dev/ref/mod
+        https://go.dev/ref/mod 
