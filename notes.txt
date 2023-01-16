@@ -161,3 +161,43 @@ Collection
 
     Map
         varying length typed collection of key/value pairs
+
+Modularization
+    Modules
+        Any code that is versioned, packaged & deployed together
+    Packages
+        Internal organization of a module
+
+    Before Go 1.13 (No Modules)
+        $GOPATH
+            \bin
+                Go binaries
+            \pkg
+                source code for 3rd party dependencies
+            \src
+                \github.com
+                    \tkmagesh
+                        \my-app (package)
+                            import "github.com/tkmagesh/my-app/db"
+                            \db
+                            \utils
+                        \my-app-2
+
+    In Go1.13, Modules were introduced
+    ~\09-modularity
+        go.mod 
+            module-name
+                (https://github.com/tkmagesh/ibm-go-jan-2023/09-modularity)
+            go version
+
+    To create a module
+        go mod init <module_name>
+
+    To run a module
+        go run .
+    
+    To create a build of a module
+        go build .
+        go build -o <binary_filename> .
+                            
+
