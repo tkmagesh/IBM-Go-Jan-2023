@@ -189,6 +189,7 @@ Modularization
             module-name
                 (https://github.com/tkmagesh/ibm-go-jan-2023/09-modularity)
             go version
+            dependencies (optional)
 
     To create a module
         go mod init <module_name>
@@ -200,4 +201,33 @@ Modularization
         go build .
         go build -o <binary_filename> .
                             
+    To download a 3rd party module/package
+        go get <module_name>
+        ex:
+            go get github.com/fatih/color
+        
+        (Note: By default, the dependencies code is downloaded to GOPATH/pkg folder)
 
+    To update the go.mod file (sync the package usage)
+        go mod tidy
+
+    To download the dependencies of a module
+        go mod download
+
+    To localize the dependencies
+        go mod vendor
+
+    To refer to the module cache
+        go run -mod=mod .
+    
+    To install a go module as an executable binary
+        go install <module_name>
+
+        
+    Other useful commands
+        go mod graph
+        go mod why <module>
+    
+    
+    Reference :
+        https://go.dev/ref/mod

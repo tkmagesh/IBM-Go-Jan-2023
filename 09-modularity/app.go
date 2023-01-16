@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 
+	"github.com/fatih/color"
 	calc "github.com/tkmagesh/ibm-go-jan-2023/09-modularity/calculator" // importing with an alias
 	"github.com/tkmagesh/ibm-go-jan-2023/09-modularity/calculator/utils"
 	// _ "github.com/tkmagesh/ibm-go-jan-2023/09-modularity/calculator" // importing ONLY to execute the "init" function(s)
 )
 
 func main() {
-	fmt.Println("module executed")
+	// fmt.Println("module executed")
+	color.Red("module executed")
 	/*
 		fmt.Println(calculator.Add(100, 200))
 		fmt.Println(calculator.Subtract(100, 200))
