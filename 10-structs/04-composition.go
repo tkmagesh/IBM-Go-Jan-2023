@@ -16,6 +16,14 @@ type Product struct {
 		ApplyDiscount() => update the cost of the given product by applying the given discount (%)
 */
 
+func FormatProduct(product Product) string {
+	return fmt.Sprintf("Id = %d, Name = %q, Cost = %.2f, Units = %d, Category = %q", product.Id, product.Name, product.Cost, product.Units, product.Category)
+}
+
+func ApplyDiscount(product *Product, discount float32) {
+	product.Cost = product.Cost * ((100 - discount) / 100)
+}
+
 type Dummy struct {
 	Name string
 }
@@ -46,5 +54,8 @@ func main() {
 	fmt.Println(grapes.Name)
 
 	/* Use the "FormatProduct()" function to print the grapes (PerishableProduct) */
+	fmt.Println(FormatProduct(grapes.Product))
 	/* Use the "ApplyDiscount()" function to apply 10% discount for the grapes and print */
+	ApplyDiscount(&grapes.Product, 10)
+	fmt.Println(FormatProduct(grapes.Product))
 }
