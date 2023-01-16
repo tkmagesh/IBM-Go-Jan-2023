@@ -11,17 +11,22 @@ type Product struct {
 }
 
 /* Convert the following into methods of Product */
-func FormatProduct(product Product) string {
+func (product Product) Format() string {
 	return fmt.Sprintf("Id = %d, Name = %q, Cost = %.2f, Units = %d, Category = %q", product.Id, product.Name, product.Cost, product.Units, product.Category)
 }
 
-func ApplyDiscount(product *Product, discount float32) {
+func (product *Product) ApplyDiscount(discount float32) {
 	product.Cost = product.Cost * ((100 - discount) / 100)
 }
 
 type PerishableProduct struct {
 	Product
 	Expiry string
+}
+
+// override the Product.Format() method
+func (pp PerishableProduct) Format() string {
+	return fmt.Sprintf("%s, Expiry = %q", pp.Product.Format(), pp.Expiry)
 }
 
 func main() {
@@ -38,8 +43,11 @@ func main() {
 	}
 
 	/* Use the "FormatProduct()" function to print the grapes (PerishableProduct) */
-	fmt.Println(FormatProduct(grapes.Product))
+	// fmt.Println(FormatProduct(grapes.Product))
+	fmt.Println(grapes.Format())
 	/* Use the "ApplyDiscount()" function to apply 10% discount for the grapes and print */
-	ApplyDiscount(&grapes.Product, 10)
-	fmt.Println(FormatProduct(grapes.Product))
+	// ApplyDiscount(&grapes.Product, 10)
+	grapes.ApplyDiscount(10)
+	// fmt.Println(FormatProduct(grapes.Product))
+	fmt.Println(grapes.Format())
 }
