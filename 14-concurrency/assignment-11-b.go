@@ -10,14 +10,51 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 )
 
 func main() {
-	ch := genPrimes(3, 100)
-	for primeNo := range ch {
+	resultCh := make(chan int)
+
+	go func() {
+		wg := &sync.WaitGroup{}
+
+		wg.Add(1)
+		go func() {
+			ch := genPrimes(3, 100)
+			for primeNo := range ch {
+				resultCh <- primeNo
+			}
+			wg.Done()
+		}()
+
+		wg.Add(1)
+		go func() {
+			ch := genPrimes(101, 200)
+			for primeNo := range ch {
+				resultCh <- primeNo
+			}
+			wg.Done()
+		}()
+
+		wg.Add(1)
+		go func() {
+			ch := genPrimes(201, 300)
+			for primeNo := range ch {
+				resultCh <- primeNo
+			}
+			wg.Done()
+		}()
+
+		wg.Wait()
+		close(resultCh)
+	}()
+
+	for primeNo := range resultCh {
 		fmt.Println(primeNo)
 	}
+
 }
 
 func genPrimes(start, end int) <-chan int {
