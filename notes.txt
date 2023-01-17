@@ -237,3 +237,5 @@ Modularization
 Interface
     In Go, interfaces are "IMPLICITLY" implemented
     
+Concurrency
+    Ability to have more than one execution path 
