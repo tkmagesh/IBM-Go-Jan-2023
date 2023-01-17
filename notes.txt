@@ -267,3 +267,6 @@ Concurrency
                 Receive operation will be blocked until the data becomes available in the channel
             
             A "SEND" operation is blocked UNTIL a RECEIVE operation is initated (conditions apply)
+
+Testing
+    go test -v ./...
