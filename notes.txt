@@ -239,3 +239,31 @@ Interface
     
 Concurrency
     Ability to have more than one execution path 
+
+    Detecting Data Races
+        go run --race <filename.go>
+        go build --race <filename.go>
+
+    Channel 
+        "Data type" designed to enable communication between goroutines
+
+        Declaration
+            var <var_name> chan <data_type>
+            var ch chan int
+        
+        Initlialization
+            <var_name> = make(chan <data_type>)
+            ch = make(chan int)
+        
+        Channel Operation ( <- )
+            Send Operation
+                ch <- 10
+
+            Receive Operation
+                data := <- ch
+
+        Behavior
+            A "RECEIVE" operation is ALWAYS a blocking operation
+                Receive operation will be blocked until the data becomes available in the channel
+            
+            A "SEND" operation is blocked UNTIL a RECEIVE operation is initated (conditions apply)
