@@ -9,16 +9,14 @@ import (
 
 func main() {
 	wg := &sync.WaitGroup{}
-	ch := make(chan int)
+	result := 0
 	wg.Add(1)
-	go add(100, 200, wg, ch)
+	go add(100, 200, wg, &result)
 	wg.Wait()
-	result := <-ch
 	fmt.Println("Result :", result)
 }
 
-func add(x, y int, wg *sync.WaitGroup, ch chan int) {
-	result := x + y
-	ch <- result
+func add(x, y int, wg *sync.WaitGroup, result *int) {
+	*result = x + y
 	wg.Done()
 }
