@@ -61,6 +61,10 @@ func PrintShape(x ShapeStatsFinder) {
 func main() {
 
 	c := Circle{Radius: 12}
+
+	var af AreaFinder
+	af = c
+	fmt.Println(af.Area())
 	// fmt.Println("Area :", c.Area())
 	/*
 		PrintArea(c)
